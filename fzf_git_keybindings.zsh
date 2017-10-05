@@ -8,8 +8,7 @@ join-lines() {
 bind-git-helper() {
   local char
   for c in $@; do
-    eval "fzf-g$c-widget() { local result=\$(g$c | join-lines); zle reset-prompt; LBUFFER+=\$result }"
-    # eval "fzf-g$c-widget() { local result=\$(g$c | join-lines);  LBUFFER+=\$result }"
+    eval "fzf-g$c-widget() { local result=\$(${FZF_PREFIX}g$c | join-lines); zle reset-prompt; LBUFFER+=\$result }"
     eval "zle -N fzf-g$c-widget"
     eval "bindkey '^g^$c' fzf-g$c-widget"
   done
