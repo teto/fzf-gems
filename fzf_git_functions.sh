@@ -9,7 +9,7 @@ fzf-down() {
   fzf --height 50% "$@" --border
 }
 
-FZF_PREFIX="fzf-git-"
+FZF_PREFIX="fzf-git"
 
 function "${FZF_PREFIX}-gf" () {
   is_in_git_repo || return
