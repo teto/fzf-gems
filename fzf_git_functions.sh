@@ -42,7 +42,7 @@ function "${FZF_PREFIX}gh" () {
   fzf-down --ansi --no-sort --reverse --multi --bind 'ctrl-s:toggle-sort' \
     --header 'Press CTRL-S to toggle sort' \
     --preview 'grep -o "[a-f0-9]\{7,\}" <<< {} | head -1 | xargs git show --color=always | head -'$LINES |
-  grep -o "[a-f0-9]\{7,\}" | head -1  is_in_git_repo || return
+  grep -o "[a-f0-9]\{7,\}" | head -1
 }
 
 function "${FZF_PREFIX}gr" () {
