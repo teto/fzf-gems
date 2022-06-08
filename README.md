@@ -13,3 +13,22 @@ then you can either run the functions:
 `$ fzf-g{b,r,f}-widget`
 or use the mappings
 CTRL-g CTRL-{f b t r h}
+
+
+## Integration into ZSH through plugin
+
+1. clone
+
+```zsh
+git clone https://github.com/teto/fzf-gems.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-gems
+```
+
+2. edit `~/.zshrc`
+
+```zsh
+plugins=(
+ ...
+ fzf-gems
+)
+```
+
